@@ -14,7 +14,7 @@ class Project(models.Model):
     project_name=models.CharField(max_length=150)
     client_name=models.ForeignKey(Client,on_delete=models.CASCADE,related_name = 'clientproject')
     created_at = models.DateTimeField(auto_now_add=True)
-    createdBy = models.ForeignKey(User,on_delete=models.CASCADE)
+    createdBy = models.ForeignKey(User,on_delete=models.CASCADE,verbose_name='User')
     updated_at = models.DateTimeField(auto_now=True)
     
 
